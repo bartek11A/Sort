@@ -4,12 +4,12 @@ void main() {
 
     Scanner scanner = new Scanner(System.in);
 
-    IO.println("MENU \n 0 -> sortowanie liczb \n 1 -> sortowanie liter");
+    IO.println("MENU \n 1 -> sortowanie liczb \n 2 -> sortowanie liter");
     IO.print("Wybór: ");
-    int choice = scanner.nextInt();
+    int choice = (scanner.hasNextInt()) ? scanner.nextInt() : 0;
 
     switch(choice) {
-        case 0:
+        case 1:
             IO.print("Liczba 1: ");
             int l1 = (int) scanner.nextDouble();
 
@@ -21,7 +21,7 @@ void main() {
 
             numSort(l1, l2, l3);
             break;
-        case 1:
+        case 2:
             IO.print("Litera 1: ");
             char c1 = scanner.next().charAt(0);
 
@@ -34,7 +34,7 @@ void main() {
             charSort(c1, c2, c3);
             break;
         default:
-        IO.println("Invalid input");
+            IO.println("Invalid input");
     }
 }
 
