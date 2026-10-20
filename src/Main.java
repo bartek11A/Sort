@@ -4,10 +4,17 @@ void main() {
 
     Scanner scanner = new Scanner(System.in);
 
+//    Przywitanie użytkownika
+    IO.print("Nazwa użytkownika: ");
+    String name = scanner.next();
+    IO.println("Cześć " + name);
+
+//    Wyświetlenie menu + wybór użytkownika
     IO.println("MENU \n 1 -> sortowanie liczb \n 2 -> sortowanie liter");
     IO.print("Wybór: ");
-    int choice = (scanner.hasNextInt()) ? scanner.nextInt() : 0;
+    byte choice = (scanner.hasNextByte()) ? scanner.nextByte() : 0;
 
+//    Działanie aplikacji na podstawie wyboru użytkownika
     switch(choice) {
         case 1:
             IO.print("Liczba 1: ");
