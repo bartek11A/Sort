@@ -3,6 +3,20 @@ import java.util.Scanner;
 void main() {
 
     Scanner scanner = new Scanner(System.in);
+//    Dodać switcha który zadecyduje czy użytkownik chce sortować liczby czy litery
+
+    IO.println("MENU \n 0 -> sortowanie liczb \n 1 -> sortowanie liter");
+    IO.print("Wybór: ");
+    int choice = scanner.nextInt();
+
+    switch(choice) {
+        case 0:
+//            do something
+        case 1:
+//            do something
+        default:
+            IO.println("Invalid input");
+    }
 
     IO.print("Liczba 1: ");
     int l1 = (int) scanner.nextDouble();
